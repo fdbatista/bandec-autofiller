@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "BANDEC Kiosco AutoFiller 1.0",
+    "description": "This extension allows you to automagically fill BANDEC's virtual endpoint form.",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "/img/icon.png"
+    },
+
+    "icons": {
+        "16": "/img/icon.png",
+        "48": "/img/icon.png",
+        "128": "/img/icon.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.kiosco.bandec.cu/kiosco/",
+                "https://www.kiosco.bandec.cu/kiosco",
+                "https://www.kiosco.bandec.cu/kiosco/Home",
+                "https://www.kiosco.bandec.cu/kiosco/Home/",
+                "https://www.kiosco.bandec.cu/kiosco/Home/LoginBantel",
+                "https://www.kiosco.bandec.cu/kiosco/Home/Passnuevo"
+            ],
+            "css": [
+
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/content.js"
+            ]
+        }
+    ],
+
+    "web_accessible_resources": [
+        "data/my-data.json"
+    ]
+}
